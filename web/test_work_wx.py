@@ -26,7 +26,11 @@ class TestWorkWX:
         #获取cookie
         cookies:list(dict) = self.driver.get_cookies()
         for cookie in cookies:
-            with open('work_wx.txt','w') as f:
+            with open('work_wx.txt','a') as f:
                 json.dump(cookie,f)
         wait = WebDriverWait(self.driver,10)
-        wait.until(lambda driver: driver.find_element(By.XPATH,'//*[@class="index_service_cnt_item"]')).click()
+        # #index页的添加成员
+        # wait.until(lambda driver: driver.find_element(By.XPATH,'//*[@class="index_service_cnt_item"]')).click()
+        wait.until(lambda driver: driver.find_element(By.CSS_SELECTOR, '#menu_contacts')).click()
+        # 通讯录页的添加成员
+        wait.until(lambda driver: driver.find_element(By.XPATH, '//*[@class="ww_operationBar"]//a[text()="添加成员"]')).click()

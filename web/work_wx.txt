@@ -1,1 +1,1 @@
-{"domain": ".work.weixin.qq.com", "expiry": 1588318683.219577, "httpOnly": false, "name": "wwrtx.i18n_lan", "path": "/", "secure": false, "value": "zh"}
+{"domain": ".work.weixin.qq.com", "expiry": 1588320424.575912, "httpOnly": false, "name": "wwrtx.i18n_lan", "path": "/", "secure": false, "value": "zh"}
